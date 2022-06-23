@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family:'Cairo','Exo 2','Poppins',sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&family=Exo+2:ital,wght@0,100;0,700;1,100;1,200;1,300&family=Poppins:ital,wght@0,100;0,500;0,700;1,800&display=swap');
+body{
+    width: 100%;
+    color: white;
+
+}
+:root{
+    --rojo:red;
+    --negro:black;
+    --gris:grey;
+    --naranja:orange;
+    --verde:green;
+    --blanco:white;
+}
+.section-container{
+    background-color: var(--negro)  ;
+}
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 70px 0px;
+    width: 95%;
+    max-width: 1300px;
+}
+.button{
+    background-color: var(--naranja);
+    border: 0px solid negro;
+    outline: none;
+    width: 180px;
+    height: 40px;
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+button:hover{
+    background-color: rgb(255, 185, 56);
+    transition: all 0.4s ease;
+}
+.section-title{
+    font-weight: 700;
+    font-size: 32px;
+}
+.section-p{
+    font-weight: 300;
+    font-size: 12px;
+}
+.section-p-small{
+    font-weight: 300;
+    font-size: 10px;
+}
+/* header */
+.header-container{
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+}
+.header{
+    margin: 0 auto;
+    max-width: 1300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px 0px 50px;
+}
+.logo-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo-container img{
+    height: 75%;
+}
+.navbar, .navbar-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-list{
+    gap:50px;
+}
+.navbar i{
+    font-size: 40px;
+    color: var(--blanco);
+    cursor: pointer;
+    display: none;
+}
+#toggle-menu{
+display: none;
+}
+.navbar a{
+    color: var(--blanco);
+    font-size: 22px;
+}.navbar-list li:last-child> a{
+    border: 1px solid var(--blanco);
+    font-size: 14px;
+    padding: 8px 40px;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+.navbar-list li:last-child> a:hover{
+    background-color: white;
+    color: var(--rojo);
+    transition: all 0.3s linear;
+    font-weight: 700;
+}
+@media(max-width:992px){
+.header{
+    padding: 0px 50px 0px 10px;
+}
+.navbar i{
+    display: block;
+}.navbar-list{
+    position: absolute;
+    background-color: var(--negro);
+    flex-direction: column;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: none;
+    z-index: 9999;
+}
+#toggle-menu:checked + .navbar-list {
+    display: flex;
+}
+}
