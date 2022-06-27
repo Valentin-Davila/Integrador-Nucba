@@ -22,6 +22,7 @@ body{
 }
 .section-container{
     background-color: var(--negro)  ;
+    -webkit-box-shadow: 0px 0.5px 0px 0px rgb(255, 0, 0);
 }
 .section{
     display: flex;
@@ -32,9 +33,9 @@ body{
     width: 95%;
     max-width: 1300px;
 }
-.button{
-    background-color: var(--naranja);
-    border: 0px solid negro;
+button{
+    background-color: var(--rojo);
+    border: 0px solid black;
     outline: none;
     width: 180px;
     height: 40px;
@@ -42,11 +43,12 @@ body{
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.4s linear;
 }
 button:hover{
-    background-color: rgb(255, 185, 56);
-    transition: all 0.4s ease;
+    background-color:var(--blanco);
+    color: var(--negro);
+    transition: all 0.4s linear;
 }
 .section-title{
     font-weight: 700;
@@ -104,15 +106,16 @@ display: none;
     color: var(--blanco);
     font-size: 22px;
 }.navbar-list li:last-child> a{
-    border: 1px solid var(--blanco);
+    border: 1px solid var(--rojo);
     font-size: 14px;
     padding: 8px 40px;
     border-radius: 5px;
     transition: all 0.3s linear;
 }
 .navbar-list li:last-child> a:hover{
-    background-color: white;
-    color: var(--rojo);
+    background-color: var(--blanco);
+    color: var(--negro);
+    border: none;
     transition: all 0.3s linear;
     font-weight: 700;
 }
@@ -137,3 +140,65 @@ display: none;
     display: flex;
 }
 }
+/* navbar listo */
+/* hero */
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 70px 50px;
+}
+.description-container{
+    display: flex;
+    flex-direction: column;
+    /* flex: 1 1 50%; */
+    gap: 40px;
+}
+.text-container{
+    max-width: max(40%, 400px);
+    /* background-color: blue; */
+}
+.text-container h1{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+}
+.text-container p{
+    font-size: 15px;
+    font-weight: 300;
+}
+.hero-img{
+    background-image: url(./img/stock-photo-a-man-cleaning-car-with-cloth-car-detailing-or-valeting-concept-selective-focus-1681005784.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 250px;
+    width: 40%;
+    height: 350px;
+    border-radius: 10px;
+}
+@media(max-width: 768px ){
+    .hero-img{
+        display: none;
+    }
+    .description-container{
+        justify-content: center;
+        align-items: center;
+    }
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
+/* .primary-button{
+    background-color: var(--naranja);
+} */
