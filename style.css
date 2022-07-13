@@ -330,3 +330,48 @@ gap: 30px;
         display: block;
     }
 }
+#servicios {
+    flex-direction: column;
+    width: min(600px, 90%);
+    gap: 40px;
+}
+.servicios-title-container{
+    text-align: center;
+    width: 85%;
+}
+.section-title{
+    padding-bottom: 10px;
+}
+.servicios-cards-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+.servicio-card{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0px 50px;
+    width: min(70vw, 600px);
+    height: 100px;
+    background:var(--gris);
+}
+.servicios-info{
+    display: flex;
+    flex-direction: column;
+}
+.servicios-dates, .servicios-time{
+    font-weight: 700;
+    text-align: center;
+}
+/* .servicios-dates{
+    font-size: 20px;
+} */
+.division {
+    width: min(600px, 90%);
+    margin-top: 80px;
+    height: 3px;
+    background-color: var(--rojo);
+
+}
