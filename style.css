@@ -220,14 +220,14 @@ display: none;
     display: flex;
     width: 350px;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
-.direccion{
+/* .direccion{
     font-weight: 700;
-}
+} */
 .about-cards-container{ 
 display: flex;
-gap: 30px;
+gap: 20px;
 }
 .about-card{
     display: flex;
@@ -236,27 +236,40 @@ gap: 30px;
     justify-content: center;
     background-color: var(--gris);
     height: 60px;
-    width: 100px;
+    width: 50px;
     border-radius: 5px;
+}
+.about-ul{
+display: flex;
+flex-direction: column;
+gap: 5px;
 }
 .about-card:hover{
     transform: scale(105%);
     transition: all 0.3s linear;
     background: var(--rojo);
 }
-.about-card span{
+.about-card img{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+
+}
+/* .about-card span{
     font-weight: 700px;
     font-size: 20px;
-}
+} */
 @media(max-width:768px){
 #about-us{
     flex-direction: column;
     gap: 20px;
 }
 }
+
+
 #modalidad-t{
     flex-direction: column;
-    gap: max(120px, 10%);
+    gap: max(80px, 10%);
 }
 .title-container{
     display: flex;
@@ -266,7 +279,7 @@ gap: 30px;
     padding-bottom: 20px;
     
 }
-.mod-cards-container{
+/* .mod-cards-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -314,10 +327,40 @@ gap: 30px;
 .mod-card p{
     font-size: 12px;
     padding: 0 5px;
+} */
+.logo-marcas{
+    max-width: 1300px;
+    /* box-shadow: 0px 0px 4px 3px #ffffff; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* background: gray; */
+}
+.marcas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 auto; */
+    gap: 20px;
+
+}
+.logo1{
+    width: 100px;
+    margin-right: 5vw;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 3px #ffffff;
+}
+.logo1:hover{
+transform: scale(105%);
+    transition-duration: 0.3s;
+    box-shadow: 0px 0px 5px 4px #ffffff;
 }
 .btn-responsive{
     display: none;
 }
+
+
 @media(max-width:992px){
     .mod-cards-container{
         width: 100%;
